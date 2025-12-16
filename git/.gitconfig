@@ -7,6 +7,7 @@
 
 [user]
   name       = Dor Avital
+  email      = dor.devops@gmail.com
 
 [checkout]
   defaultRemote = origin
