@@ -7,7 +7,6 @@
 
 [user]
   name       = Dor Avital
-  email      = dorav@payoneer.com
 
 [checkout]
   defaultRemote = origin
