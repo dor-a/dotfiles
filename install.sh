@@ -64,22 +64,22 @@ log_success "Pre-installation checks passed"
 # HOMEBREW INSTALLATION
 # ============================================================================
 
-# log_info "Checking for Homebrew..."
+log_info "Checking for Homebrew..."
 
-# if ! command_exists "brew"; then
-#     log_info "Installing Homebrew..."
-#     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command_exists "brew"; then
+    log_info "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     
-#     # Add Homebrew to PATH for Apple Silicon Macs
-#     if [[ -d "/opt/homebrew" ]]; then
-#         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-#         eval "$(/opt/homebrew/bin/brew shellenv)"
-#     fi
+    # Add Homebrew to PATH for Apple Silicon Macs
+    if [[ -d "/opt/homebrew" ]]; then
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
     
-#     log_success "Homebrew installed successfully"
-# else
-#     log_success "Homebrew already installed"
-# fi
+    log_success "Homebrew installed successfully"
+else
+    log_success "Homebrew already installed"
+fi
 
 # # ============================================================================
 # # INSTALL PACKAGES FROM BREWFILE
