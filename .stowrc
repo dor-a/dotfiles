@@ -1,0 +1,31 @@
+# GNU Stow configuration file
+# This file configures how stow manages symlinks for dotfiles
+# Place this in the root of your dotfiles directory
+
+# Target directory (where symlinks will be created)
+--target=~
+
+# Verbose output (shows what stow is doing)
+--verbose
+
+# Don't fold (create individual symlinks instead of symlinking entire directories)
+--no-folding
+
+# Ignore these patterns when stowing
+--ignore='\.DS_Store'
+--ignore='\.git'
+--ignore='\.gitignore'
+--ignore='\.stow-local-ignore'
+--ignore='^README.*'
+--ignore='^LICENSE.*'
+--ignore='^INSTALL.*'
+--ignore='^CHANGELOG.*'
+--ignore='\.md$'
+--ignore='\.txt$'
+--ignore='^install\.sh$'
+--ignore='^setup\.sh$'
+--ignore='^Brewfile$'
+--ignore='^\.stowrc$'
+
+# Delete conflicting files/links before stowing
+--delete
