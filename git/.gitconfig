@@ -6,7 +6,8 @@
   safecrlf     = warn
 
 [user]
-  name       = Dor Avital
+	name = Dor Avital
+	email = dorav@payoneer.com
 
 [checkout]
   defaultRemote = origin

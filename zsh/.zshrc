@@ -106,6 +106,7 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 # setup gcloud-sdk
 export PATH="/usr/local/share/google-cloud-sdk/bin:$PATH"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export GOOGLE_CLOUD_QUOTA_PROJECT=pynr-prod-iac-core-0
 
 # executable files
 export PATH="$HOME/.local/bin:$PATH"
@@ -116,3 +117,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export NODE_TLS_REJECT_UNAUTHORIZED=0
+export PATH="/opt/homebrew/opt/dotnet@8/bin:$PATH"
