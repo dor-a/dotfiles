@@ -95,6 +95,9 @@ alias hosts='sudo ${EDITOR:-nvim} /etc/hosts'
 alias reload='source ~/.zshrc'
 alias rl='source ~/.zshrc'
 
+# Claude Code with Opus model
+alias claude='claude --model opus'
+
 # Clear screen
 alias c='clear'
 alias cls='clear'
