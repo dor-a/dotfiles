@@ -1,3 +1,17 @@
+# ============================================================================
+# Repair fpath before anything autoloads (must stay at the very top).
+# A parent process (e.g. an editor's terminal integration like Cursor/VS Code)
+# can inject a stale, *exported* FPATH that was captured before a
+# `brew upgrade zsh`. It points fpath at /opt/homebrew/Cellar/zsh/<old-version>,
+# which no longer exists after the upgrade, so autoload can't find is-at-least,
+# add-zsh-hook, colors, compinit, vcs_info, etc. — and zinit fails on load.
+# Prepend the version-independent Homebrew functions dir so autoload always
+# works regardless of whatever FPATH we inherited.
+# ============================================================================
+if [[ -d /opt/homebrew/share/zsh/functions ]]; then
+  fpath=(/opt/homebrew/share/zsh/functions $fpath)
+fi
+
 # initialises p10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
