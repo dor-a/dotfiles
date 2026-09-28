@@ -17,6 +17,7 @@ alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
 alias down='cd ~/Downloads'
 alias dev='cd ~/Developer'
+alias arch='cd ~/Architecture'
 
 alias vim='nvim'  # Use nvim instead of vim if available
 alias vi='nvim'  # Use nvim instead of vim if available
