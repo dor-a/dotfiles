@@ -101,6 +101,7 @@
 # brew "luajit"
 # brew "luv"
 # brew "tree-sitter"
+# brew "tree-sitter-cli"        # Required by nvim-treesitter (main branch) to build parsers
 
 # # Python dependencies
 # brew "certifi"
